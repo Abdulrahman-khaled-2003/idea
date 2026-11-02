@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Idea;
 use App\Models\Step;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,7 +21,7 @@ class StepFactory extends Factory
         return [
             'description' => fake()->sentence(),
             'completed' => fake()->boolean(),
-
+            'idea_id' => Idea::factory(),
         ];
     }
 }
